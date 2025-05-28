@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "estudiante")
+@Table(name = "sala")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,23 +14,18 @@ public class Sala {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer codigo;
 
-    @Column(unique = true, length = 9, nullable = false)
-    private String run;
-
-    @Column(length = 100, nullable = false)
-    private String nombres;
-
-    @Column(length = 100)
-    private String correo;
-
-    @Column(nullable = false)
-    private Character jornada;
+    @Column(nullable = false, length = 50)
+    private String nombre;
 
     @Column
-    private Integer telefono;
+    private Integer capacidad;
 
-    @Column(length = 100, nullable = false)
-    private String codigoCarrera;
+    @Column(nullable = false)
+    private Integer idInstituto;
+
+    @Column(nullable = false)
+    private Integer idTipo;
+
 }
