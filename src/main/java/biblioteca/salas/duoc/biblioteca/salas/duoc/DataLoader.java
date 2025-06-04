@@ -46,7 +46,7 @@ public class DataLoader implements CommandLineRunner {
         List<TipoSala> tipoSalas = tipoSalaRepository.findAll();
 
         // Generar salas
-        for (int i = 0; i < 400; i++) {
+        for (int i = 0; i < 100; i++) {
             Sala sala = new Sala();
             sala.setNombre(faker.university().name());
             sala.setCapacidad(faker.number().numberBetween(10,100));
@@ -56,7 +56,7 @@ public class DataLoader implements CommandLineRunner {
         }
 
         // Generar carreras
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 20; i++) {
             Carrera carrera = new Carrera();
             carrera.setCodigo(faker.code().asin());
             carrera.setNombre(faker.educator().course());
@@ -66,7 +66,7 @@ public class DataLoader implements CommandLineRunner {
         List<Carrera> carreras = carreraRepository.findAll();
 
         // Generar estudiantes
-        for (int i = 0; i < 2500; i++) {
+        for (int i = 0; i < 200; i++) {
             Estudiante estudiante = new Estudiante();
             // estudiante.setId(i + 1);
             estudiante.setRun(faker.idNumber().valid().substring(0, 9));
