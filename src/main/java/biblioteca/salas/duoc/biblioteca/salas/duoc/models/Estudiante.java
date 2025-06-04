@@ -28,9 +28,9 @@ public class Estudiante {
     @Column(nullable = false)
     private Character jornada;
 
-    @Column
     private Integer telefono;
 
-    @Column(length = 100, nullable = false)
-    private String codigoCarrera;
+    @ManyToOne
+    @JoinColumn(name = "codigo_carrera", nullable = false)
+    private Carrera carrera;
 }

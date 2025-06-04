@@ -20,12 +20,6 @@ public class Reserva {
     private Integer id;
 
     @Column(nullable = false)
-    private Integer idEstudiante;
-
-    @Column(nullable = false)
-    private Integer codigoSala;
-
-    @Column(nullable = false)
     private Date fechaSolicitada;
 
     @Column(nullable = false)
@@ -34,4 +28,12 @@ public class Reserva {
     private LocalTime horaCierre;
 
     private Integer estado;
+
+    @ManyToOne
+    @JoinColumn(name = "id_estudiante", nullable = false)
+    private Estudiante estudiante;
+
+    @ManyToOne
+    @JoinColumn(name = "codigo_sala", nullable = false)
+    private Sala sala;
 }
