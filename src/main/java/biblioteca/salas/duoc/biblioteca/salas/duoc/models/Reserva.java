@@ -23,9 +23,9 @@ public class Reserva {
     private Date fechaSolicitada;
 
     @Column(nullable = false)
-    private LocalTime horaSolicitada;
+    private Date horaSolicitada;
 
-    private LocalTime horaCierre;
+    private Date horaCierre;
 
     private Integer estado;
 
