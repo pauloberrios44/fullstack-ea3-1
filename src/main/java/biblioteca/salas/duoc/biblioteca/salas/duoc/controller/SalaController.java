@@ -6,7 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SalaController {
-
-    @Autowired
-    private SalaRepository salaRepository;
 }

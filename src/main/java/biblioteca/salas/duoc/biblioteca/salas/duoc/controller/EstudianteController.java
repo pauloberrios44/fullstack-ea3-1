@@ -6,7 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EstudianteController {
-
-    @Autowired
-    private EstudianteService estudianteService;
 }
