@@ -25,7 +25,7 @@ public class Sala {
     @Column(nullable = false)
     private Integer idInstituto;
 
-    @Column(nullable = false)
-    private Integer idTipo;
-
+    @ManyToOne
+    @JoinColumn(name = "id_tipo", nullable = false)
+    private TipoSala tipoSala;
 }
